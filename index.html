@@ -51,7 +51,6 @@
                 legalized marihuana.
             </p>
         </article>
-
         <!-- container -->
         <section class="container">
             <!-- Spots -->
@@ -97,7 +96,6 @@
                     </section>
                 </article>
             </section>
-
             <!-- Food -->
             <section id="food">
                 <h2>Food</h2>
@@ -114,7 +112,6 @@
                     </section>
                 </article>
             </section>
-
             <!-- Landmarks -->
             <section id="landmarks">
                 <h2>Landmarks</h2>
@@ -239,10 +236,26 @@
             }
         }
 
-        burgerMenu.addEventListener('click', openCloseMenu);
+        // burgerMenu.addEventListener('click', openCloseMenu);
 
-        for (let i = 0; i < link.length; i++) {
-            link[i].addEventListener('click', openCloseMenu);
+        // for (let i = 0; i < link.length; i++) {
+        //     link[i].addEventListener('click', openCloseMenu);
+        // }
+
+        // display mobile nav only if window size is less than 992px
+        if (window.matchMedia("(max-width: 992px)").matches) {
+            burgerMenu.addEventListener('click', openCloseMenu);
+
+            for (let i = 0; i < link.length; i++) {
+                link[i].addEventListener('click', openCloseMenu);
+            }
+            // reload page by resizing
+            window.onresize = function () { location.reload(); }
+        }
+        else {
+            sideMenu.style.visibility = "visible";
+            // reload page by resizing
+            window.onresize = function () { location.reload(); }
         }
 
     </script>

@@ -141,7 +141,7 @@ footer > a {
 
 /* media queries */
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
 
     body {
         background-image: url(images/montevideo1024x678.jpeg);
@@ -156,13 +156,13 @@ footer > a {
     }
 
     .main-article {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
         /* margin-top: 3rem; */
     }
 
     .container {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
     }
 
@@ -175,8 +175,7 @@ footer > a {
 
     .card img {
         width: 50%;
-        height: 23rem;
-        /* padding-right: 1.5rem; */
+        /* height: 23rem; */
     }
 
     .inner-box {
@@ -186,6 +185,33 @@ footer > a {
     h3 {
         margin-top: -1rem;
         margin-bottom: 1.5rem;
+    }
+
+    /* nav */
+
+    nav {
+        width: 20%;
+        z-index: 1;
+    }
+
+    .open-slide {
+        display: none;
+    }
+
+    #side-menu {
+        display: block;
+        height: 3.5rem;
+        margin-top: 0rem;
+        color: #000;
+        background-color: #fff;
+        opacity: 1;
+    }
+
+    #side-menu ul li {
+        display: inline-block;
+        padding: 1rem;
+        font-weight: bold;
+        color: #000;
     }
 
 }
